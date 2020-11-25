@@ -1,0 +1,136 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[a4paper]{geometry}
+
+\usepackage{graphicx}
+%\graphicspath{ {./images/} }
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{EKG} %Kopfzeile links
+\fancyfoot[C]{\thepage}
+
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[german]{babel}
+
+\usepackage{setspace}
+
+\usepackage{caption}
+\usepackage{float}
+
+\usepackage{hyperref}
+
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+
+\setlength{\parindent}{0pt}
+
+
+\hypersetup{
+    pdftitle = {BIM Bericht},
+    pdfsubject = {BIM},
+    pdfauthor = {Leona Köck, Chris Rüttimann, Daniel Baur, Tina Balsiger, Aurelia Salib},
+    pdfkeywords = {} ,
+    pdfcreator = {pdflatex},
+    pdfproducer = {LaTeX with hyperref}
+}
+
+\usepackage[
+    style=apa,
+    backend=biber,
+    sortcites=false,
+    sorting=none,
+    hyperref=true,
+    backref=false
+]{biblatex}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\addbibresource{test.bib}
+
+\begin{document}
+    \pagenumbering{Alph}
+% ---------------------
+% Titlepage
+% ---------------------
+    \begin{titlepage}
+        \begin{center}
+        {\LARGE OST Ostschweizer Fachhochschule}
+            \\[1.5cm]
+            \linespread{1.2}\huge {\bfseries BIM Bericht}
+            
+            {\large{Turnierbewertungssoftware}}
+            \\[1.5cm]
+   %         \linespread{1}
+           \includegraphics[width=8cm]{images/ost_logo.eps}
+           \\[1cm]
+            {\small{Autoren}}\\
+            {\Large{Leona Köck}}\\
+            {\Large{Chris Rüttimann}}\\
+            {\Large{Daniel Baur}}\\
+            {\Large{Tina Balsiger}}\\
+            {\Large{Aurelia Salib}}
+            \\[1cm]
+
+            \vspace*{\fill}
+            \large{\today}
+        \end{center}
+
+    \end{titlepage}
+
+% ---------------------
+% Abstract
+% ---------------------
+    \pagenumbering{Roman}
+    \pdfbookmark[section]{Abstract}{abstract}
+    \section*{Abstract}
+    \addtocounter{section}{0}
+	
+	Dies ist ein Abstract.
+	
+    \pagebreak
+    \setstretch{1.25}
+% ---------------------
+% Table of contents
+% ---------------------
+    \tableofcontents
+    \pagebreak
+
+
+% ---------------------
+% Body
+% ---------------------
+    \pagenumbering{arabic}
+
+
+    \section{Einleitung}
+
+
+
+	% EKG-Pdfs drucka für an anhang 
+    \pagebreak
+% ---------------------
+% References
+% ---------------------
+    \printbibliography
+    \addcontentsline{toc}{section}{Literaturverzeichnis}
+
+% ---------------------
+% List of figures
+% ---------------------
+    \listoffigures
+    \addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    \pagebreak
+
+% ---------------------
+% List of tables
+% ---------------------
+%\listoftables
+
+	%\appendix
+	%\section{Messungen Chris Ruhe}
+
+
+
+\end{document}
