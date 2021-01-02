@@ -1,8 +1,17 @@
 \documentclass[10pt]{scrartcl}
 \usepackage[a4paper]{geometry}
 
+
+% Arial für BIM Bericht
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+
+% Titelgrössen für Bericht
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+
+\usepackage{pgf-pie} % Kuchendiagramm
 
 \usepackage{graphicx}
 %\graphicspath{ {./images/} }
@@ -136,14 +145,13 @@
 % ---------------------
 %\listoftables
 
-	\appendix
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.85\linewidth]{images/marktanalyse.PNG}
-        \caption{Marktanalyse}
-        \label{fig:marktanalyse}
-    \end{figure}
+    \pagebreak
 
+	\appendix
+
+    \section{Berechnungen}
+
+    \input{anhang}
 
 
 \end{document}
